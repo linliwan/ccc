@@ -30,7 +30,7 @@ int dfs(string word, vector<vector<char>> grid, int x, int y) {
                 continue;
             }
 
-            // 因为目不考虑转弯，所以这里只需要保持当前方向前进探索即可
+            // 因为不考虑转弯，所以这里只需要保持当前方向前进探索即可
             int nx = cx + direction.first;
             int ny = cy + direction.second;
             if (nx >= 0 && ny >= 0 && nx < grid.size() && ny < grid[0].size() && grid[nx][ny] == word[index + 1]) {
